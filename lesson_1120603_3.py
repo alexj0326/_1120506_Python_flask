@@ -1,5 +1,5 @@
 import streamlit as st
-
+import datetime
 
 def button_click():
     st.write(st.session_state)
@@ -36,3 +36,44 @@ option = st.selectbox(
     ('請選擇...','Email', '電話', '手機'))
 
 st.write('You selected:', option)
+
+
+st.divider()
+
+
+
+options = st.multiselect(
+    '請選擇您喜歡的顏色',
+    ['Green', 'Yellow', 'Red', 'Blue'],
+    ['Yellow'])
+
+st.write('您選擇:', options)
+
+
+st.divider()
+
+age = st.slider('How old are you?', 0, 130, 25)
+st.write("I'm ", age, 'years old')
+
+st.divider()
+
+values = st.slider(
+    'Select a range of values',
+    0.0, 100.0, (25.0, 75.0))
+st.write('Values:', values)
+
+st.divider()
+
+
+title = st.text_input('Movie title', 'Life of Brian')
+st.write('The current movie title is', title)
+
+
+number = st.number_input('Insert a number')
+st.write('The current number is ', number)
+
+
+d = st.date_input(
+    "When\'s your birthday",
+    datetime.date(2019, 7, 6))
+st.write('Your birthday is:', d)
