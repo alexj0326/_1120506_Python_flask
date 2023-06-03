@@ -3,7 +3,6 @@ import streamlit as st
 # hjhjhj
 
 #註解
-
 '''
 ghhgjkguikh
 st.write("# Hello Python")
