@@ -40,6 +40,7 @@ dataFrame2 = dataFrame1[mask]
 
 st.write(option,":",len(dataFrame2.index))
 
+st.dataframe(dataFrame2)
 
 #st.write('你所選擇行政區域 :::: ', option)
 
