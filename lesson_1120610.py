@@ -22,7 +22,7 @@ for code in selected_codes:
     code1 = code[:4]+'.TW'
     code_stock_dataFrame = fetch_stock_dataFrame(code1)
     code_stock_dataFrame_sorted = code_stock_dataFrame.sort_index(ascending=False)
-    st.subheader(code)
+    st.subheader(code)  
     st.dataframe(code_stock_dataFrame_sorted,width=1024)
     st.line_chart(code_stock_dataFrame_sorted,y='Adj Close')
     st.divider()
